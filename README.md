@@ -28,7 +28,7 @@ https://github.com/user-attachments/assets/348db5cd-82c9-4221-bb02-512415610f58
 ## 🛠️ Tech Stack
 
 - **Framework:** React (with Vite)
-- **Styling:** Plain CSS (or Tailwind if used)
+- **Styling:** Plain CSS 
 - **API:** [CoinStats API](https://docs.coinstats.app/)
 - **Build Tools:** Vite, ESLint, Prettier
 
