@@ -1,0 +1,294 @@
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Roboto, sans-serif;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  color: #f0f8ff;
+  padding-top: 60px;
+}
+
+.app {
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+h3{
+  padding: 0px;
+  margin: 0px;
+}
+/* ─────────────── Top Bar ─────────────── */
+.top-bar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #111827;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #444;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+  height: 37px;
+  display: flex;
+  margin: 0px;
+  flex-direction: column;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.top-bar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.title {
+  font-size: 30px;
+  color: #00ffff;
+  text-shadow: 1px 1px 2px #787373;
+  flex: 1;
+  text-align: center;
+  margin: 0;
+}
+
+
+.controls {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+.theme-toggle {
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  background: #00ffff;
+  border: none;
+  margin-right: 60px;
+  color: #111;
+  transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+  background: #0ff7dd;
+  transform: scale(1.05);
+}
+
+.search-input {
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: none;
+  margin-top: 21px;
+  width: 390px;
+  font-size: 1rem;
+  height: 25px;
+  outline: none;
+  background-color: #f0f8ff;
+  color: #0f2027;
+}
+
+/* ─────────────── Cards Grid ─────────────── */
+.card-grid {
+  padding: 2rem 1.5rem;
+  padding-top: 5.5rem; 
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+/* ─────────────── Individual Card ─────────────── */
+.card {
+  background: rgba(0, 0, 0, 0.65);
+  border-radius: 12px;
+  padding: 1.25rem;
+  box-shadow: 0 0 12px rgba(0, 255, 255, 0.2);
+  transition: transform 0.3s ease;
+  min-width: 265px;
+  max-width: 400px;
+  min-height: 350px;
+  margin: auto;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.6);
+}
+
+.coin-img {
+        width: 103px;
+    height: 53px;
+    object-fit: contain;
+    padding: 0px;
+    margin: 0.4rem;
+}
+
+
+.one {
+  font-size: 27px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bolder;
+  margin: 1px;
+}
+
+.symbol {
+  color: #00ffff;
+  font-weight: normal;
+      margin: 0px;
+      padding: 0px;
+}
+
+/* Price change colors */
+.parapricechange.positive {
+  color: chartreuse;
+}
+
+.parapricechange.negative {
+  color: red;
+}
+
+/* ─────────────── Misc ─────────────── */
+.updated {
+  font-size: 0.75rem;
+  color: #ccc;
+  margin-top: 2.5rem;
+}
+
+.loading {
+  font-size: 1.2rem;
+  color: #fffa;
+}
+
+/* ─────────────── 24h Range Bar ─────────────── */
+.range-bar-container {
+  width: 90%;
+  max-width: 300px;
+  margin: 1rem auto;
+  text-align: center;
+}
+
+.range-title {
+  font-weight: 600;
+  margin-bottom: 0px;
+  font-size: 0.95rem;
+  color: #ccc;
+}
+
+.range-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  margin-bottom: 0.25rem;
+  color: #ccc;
+  padding: 5px;
+}
+
+.range-bar {
+  width: 80%;
+  height: 8px;
+  background-color: #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  margin: 0 auto;
+}
+
+.range-fill {
+  height: 100%;
+  background-color: #00ffff;
+  border-radius: 10px 0 0 10px;
+  transition: width 0.5s ease;
+}
+
+@media (max-width: 480px) {
+  .price-range {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* ─────────────── Light Theme Overrides ─────────────── */
+.app.light {
+  background: linear-gradient(to right, #f7f7f7, #e1e8ed);
+  color: #1a1a1a;
+}
+
+.app.light .title {
+  color: #00ffff;
+  text-shadow: 0.5px #787373;
+  font-size: 30px;
+  margin-left: 76px;
+}
+
+.app.light .card {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  color: #222;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.app.light .card:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.app.light .theme-toggle {
+  background-color: #32e0c3;
+  color: #fff;
+}
+
+.app.dark .theme-toggle {
+  background-color: #15e4eb;
+  color: #fff;
+}
+
+.app.light input[type="text"] {
+  background-color: #fff;
+  color: #333;
+  border: 1px solid #ccc;
+}
+
+.app.light .symbol {
+  color: #045e9e;
+}
+
+.app.light .updated {
+  color: #666;
+}
+
+.app.light .parapricechange.positive {
+  color: #039e03;
+}
+
+.app.light .parapricechange.negative {
+  color: #f32121;
+}
+
+.app.light .range-title {
+  color: #222;
+}
+
+.app.light .range-labels {
+  color: #444;
+}
+
+.app.light .range-bar {
+  background-color: #e0e0e0;
+}
+
+.app.light .range-fill {
+  background-color: #0077cc;
+}
+
+
+.crypto-logo {
+  width: 40px;
+  height: 40px;
+  margin-right: 1rem;
+}
+
